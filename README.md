@@ -53,7 +53,7 @@ Estudante de Sistemas de Informação | Profissional de TI
 - 📱 WhatsApp: [Entre em contato](https://cussati.dev/#contato)
 - 💻 GitHub: [ronaldcussati/rc.dev](https://github.com/ronald-cussati/rc.dev)
 - 💼 LinkedIn: [Ronald Cussati](https://www.linkedin.com/in/ronald-cussati/)
-- 📄 [Currículo](https://cussati.dev/CurriculumRonaldCussati.pdf)
+- 📄 [Currículo]([https://cussati.dev/CurriculumRonaldCussati.pdf](https://cussati.dev/assets/Curriculum%20Ronald%20Cussati.pdf))
 
 ## Licença
 
