@@ -191,7 +191,7 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
   z-index: 2;
   position: relative;
@@ -1230,12 +1230,6 @@ max-width: 250px;
   100% {
     background-position: 0% 50%;
   }
-}
-
-@keyframes spin-glow {
-to {
---angle: 360deg;
-}
 }
 
 @keyframes levitate {
