@@ -15,6 +15,9 @@
   <meta property="og:image" content="https://ronald-cussati.github.io/rc.dev/assets/profile.webp">
   <link rel="canonical" href="https://ronald-cussati.github.io/rc.dev/">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="shortcut icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,23 +68,26 @@
             Suporte técnico, help desk, desenvolvimento web e operações de e-commerce, mais de 5 anos de mercado digital
             com atendimento internacional bilíngue.</p>
           <div class="hero-buttons">
-            <a href="https://wa.me/5528999689909" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/5511992485378" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
               aria-label="Entrar em contato via WhatsApp">
               <span data-pt="entrar em contato" data-en="get in touch">entrar em contato</span>
+            </a>
+          </div>
+
+          <div class="hero-buttons" style="margin-top: 0.75rem;">
+            <a href="assets/Curriculum Ronald Cussati.pdf" class="btn btn-outline" download>
+              <span data-pt="currículo ↓" data-en="resume ↓">currículo ↓</span>
             </a>
             <a href="#projects" class="btn btn-outline">
               <span data-pt="projetos →" data-en="projects →">projetos →</span>
             </a>
           </div>
-          <div class="hero-buttons" style="margin-top: 0.75rem;">
-            <a href="assets/Curriculum Ronald Cussati.pdf" class="btn btn-outline" download>
-              <span data-pt="currículo ↓" data-en="resume ↓">currículo ↓</span>
-            </a>
-          </div>
+          </a>
         </div>
-        <div class="hero-image reveal">
-          <img src="assets/profile.webp" alt="Ronald Cussati — Desenvolvedor Front-end" loading="lazy">
-        </div>
+      </div>
+      <div class="hero-image reveal">
+        <img src="assets/profile.webp" alt="Ronald Cussati — Desenvolvedor Front-end" loading="lazy">
+      </div>
       </div>
       <canvas id="particlesCanvas" class="particles-canvas" aria-hidden="true"></canvas>
     </section>
@@ -286,7 +292,8 @@
             PromptAI — Gerador de Prompts</h3>
           <p class="project-desc"
             data-pt="Aplicação web para gerar prompts otimizados para modelos de IA como ChatGPT, Claude, Perplexity, Midjourney e outros."
-            data-en="Web app to generate optimized prompts for AI models like ChatGPT, Claude, Perplexity, Midjourney and others.">Aplicação web
+            data-en="Web app to generate optimized prompts for AI models like ChatGPT, Claude, Perplexity, Midjourney and others.">
+            Aplicação web
             para gerar prompts otimizados para modelos de IA como ChatGPT, Claude, Perplexity, Midjourney e outros.</p>
           <div class="project-tags">
             <span data-pt="JavaScript" data-en="JavaScript">JavaScript</span>
@@ -391,6 +398,38 @@
   </footer>
   <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
   <script>
+    // ========== MOBILE IMPROVEMENTS ==========
+
+    // 1. Fechar menu ao scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const menu = document.querySelector('.nav-links');
+      const btn = document.querySelector('.mobile-menu-btn');
+      if (menu && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        if (btn) btn.classList.remove('active');
+      }
+    });
+
+    // 2. Fechar menu ao clicar fora
+    document.addEventListener('click', (e) => {
+      const menu = document.querySelector('.nav-links');
+      const btn = document.querySelector('.mobile-menu-btn');
+      if (menu && menu.classList.contains('active')) {
+        if (!menu.contains(e.target) && !btn?.contains(e.target)) {
+          menu.classList.remove('active');
+          if (btn) btn.classList.remove('active');
+        }
+      }
+    });
+
+    // 3. Reduzir partículas no mobile
+    if (window.innerWidth < 768) {
+      const canvas = document.querySelector('.particles-canvas');
+      if (canvas) canvas.style.opacity = '0.15';
+    }
+
+    // ========== SCRIPT ==========
     // Reduced motion check
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     let reducedMotion = mediaQuery.matches;
