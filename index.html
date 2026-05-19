@@ -437,16 +437,27 @@
 
     // Language toggle
     function setLanguage(lang) {
-      document.querySelectorAll('[data-pt]').forEach((el) => {
-        el.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+  document.querySelectorAll('[data-pt]').forEach((el) => {
+    const textNode = Array.from(el.childNodes).find(
+      node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+    );
+    if (textNode) {
+      textNode.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+    } else {
+      el.childNodes.forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+        }
       });
-      document.querySelectorAll('.lang-btn').forEach((btn) => {
-        const isActive = btn.dataset.lang === lang;
-        btn.classList.toggle('active', isActive);
-        btn.setAttribute('aria-pressed', isActive);
-      });
-      localStorage.setItem('lang', lang);
     }
+  });
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive);
+  });
+  localStorage.setItem('lang', lang);
+}
 
     // Stats animation
     function easeOutCubic(t) {
