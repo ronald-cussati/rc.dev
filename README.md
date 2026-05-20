@@ -1,68 +1,99 @@
-# rc.dev
+# rc.dev — Portfólio Pessoal
 
-> Portfólio pessoal bilíngue (PT/EN) de Ronald Cussati — profissional de TI com foco em help desk, suporte remoto, desenvolvimento web e operações de e-commerce.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html5.org)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://css3.com)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## Sobre
+---
 
-Este repositório abriga o código-fonte do meu portfólio pessoal, hospedado em GitHub Pages com domínio customizado. Desenvolvido do zero com HTML5, CSS3 e JavaScript vanilla, sem frameworks. Sou estudante de Sistemas de Informação no 4º período da Multivix (2024–2028) e estou 100% disponível para estágios remotos em desenvolvimento web, suporte técnico ou operações digitais.
+## Visão Geral
 
-🌐 [Visite o site](https://cussati.dev)
+Portfólio pessoal bilíngue (PT/EN) de **Ronald Cussati** — profissional de TI com foco em help desk, suporte remoto, desenvolvimento web e operações de e-commerce. Desenvolvido do zero com HTML5, CSS3 e JavaScript vanilla, sem frameworks ou bibliotecas externas.
+
+Estudante de Sistemas de Informação no 4º período da Multivix (2024–2028), 100% disponível para estágios remotos em desenvolvimento web, suporte técnico ou operações digitais.
+
+🔗 **Site:** [cussati.dev](https://cussati.dev)
+
+Navegação rápida: [Stack](#stack) · [Seções](#seções) · [Destaques](#destaques-técnicos) · [Autor](#autor--contato) · [Licença](#licença)
+
+---
 
 ## Stack
 
-Tecnologias principais usadas na construção:
+**Front-end:** HTML5 · CSS3 (Flexbox, Grid, Animations, Glassmorphism, Custom Properties) · JavaScript (ES6+, Canvas API, Intersection Observer)
 
-- **Front-end**: HTML5, CSS3 (Flexbox/Grid, Animations, Glassmorphism), JavaScript (ES6+, Canvas, Intersection Observer)
-- **Linguagens & Ferramentas**: Vanilla JS, Git/GitHub, VS Code
-- **IA & Automação**: Integrações básicas com APIs de IA
-- **Infra & Suporte**: GitHub Pages, AnyDesk, Discord
-- **E-commerce & Plataformas**: Shopify, automações legadas
-- **Design & Mídia**: Gradientes, partículas animadas, design responsivo
+**Design & Mídia:** Design Responsivo · UI/UX · Edição de Vídeo · Canva · Figma
+
+**Infra & Suporte:** GitHub Pages · AnyDesk · Help Desk · Atendimento Bilíngue
+
+**E-commerce & Plataformas:** Shopify · Discord · Criação de Sites
+
+**IA & Automação:** Prompt Engineering · Azure AI
+
+**Linguagens & Ferramentas:** Python · C · Git · GitHub · VS Code
+
+---
 
 ## Seções
 
-O portfólio é dividido em áreas chave para destacar minha trajetória:
+**Hero** — Apresentação pessoal, badge de disponibilidade para estágio e CTA para WhatsApp.
 
-- **Hero**: Apresentação pessoal, disponibilidade para estágio e CTA para WhatsApp
-- **Sobre**: Experiência desde 2020 em atendimento bilíngue e perfil multidisciplinar
-- **Stats**: Full Stack em formação, Sistemas de Informação, 100% disponível, Inglês avançado
-- **Stack Técnica**: Detalhada em 6 categorias (acima)
-- **Formação**: Bacharelado em SI + certificações (AI-900 Microsoft, Banco de Dados, Projetos de TI, Segurança em TI, IA para Estudantes)
-- **Projetos**: rc.dev (este portfólio), PromptAI (gerador de prompts otimizados), WONKA (e-commerce legado com automações)
-- **Experiência**: Profissional de TI (2020–atual) — suporte via AnyDesk, operações Shopify, comunidade Discord com +5k usuários
-- **Contato**: WhatsApp, GitHub, LinkedIn e download de currículo
+**Sobre** — Experiência desde 2020 em suporte técnico remoto, atendimento internacional bilíngue, desenvolvimento web e operações de e-commerce.
+
+**Stats** — Full Stack em formação · Sistemas de Informação · 100% disponível · Inglês Avançado.
+
+**Stack Técnica** — 6 categorias de habilidades: Front-end, Linguagens & Ferramentas, IA & Automação, Infra & Suporte, E-commerce & Plataformas, Design & Mídia.
+
+**Formação** — Bacharelado em Sistemas de Informação (Multivix) + certificações Microsoft/Fundação Bradesco: AI-900, Administração de Banco de Dados, Projetos de TI, Segurança em TI, IA para Estudantes.
+
+**Projetos** — rc.dev (este portfólio, bilíngue e acessível) · PromptAI (gerador de prompts otimizados para ChatGPT, Claude, Midjourney) · WONKA (e-commerce legado com automações em Python, C e C#, +1.800 pedidos processados).
+
+**Experiência** — Profissional de TI (2020–atual): suporte remoto via AnyDesk, operações Shopify, gestão de comunidade Discord com +5.000 usuários.
+
+**Contato** — WhatsApp · GitHub · LinkedIn · Download de Currículo.
+
+---
 
 ## Destaques Técnicos
 
-Recursos implementados para uma experiência premium:
+### Desempenho & Acessibilidade
+Lighthouse 95+ score · Mobile-first · prefers-reduced-motion · skip-link · alvos de toque ≥44px
 
-- Modo escuro consistente com `prefers-color-scheme`
-- Partículas animadas em Canvas para Hero
-- Cursor glow dinâmico e feedback tátil em touch
-- Glassmorphism, gradientes e scroll reveal suave (Intersection Observer)
-- Alternância de idioma PT/EN via data-attributes
-- Menu mobile responsivo com overlay
-- Otimização mobile-first e performance (Lighthouse 95+ score)
-- Acessibilidade: skip-link, `prefers-reduced-motion`, alvos de toque ≥44px
+### Experiência Visual
+Modo escuro com paleta consistente · Partículas animadas em Canvas · Cursor glow dinâmico · Glassmorphism e gradientes · Scroll reveal com Intersection Observer · Animações suaves (levitate + orbit ring)
+
+### Funcionalidades
+Alternância de idioma PT/EN via data-attributes · Menu mobile responsivo com overlay · Feedback tátil em dispositivos touch · Suporte a prefers-color-scheme
+
+---
+
+## Performance
+
+| Métrica | Score |
+|---------|-------|
+| Performance | 95+ |
+| Acessibilidade | 100 |
+| Boas Práticas | 100 |
+| SEO | 100 |
+
+---
 
 ## Autor & Contato
 
 **Ronald Cussati**  
-Estudante de Sistemas de Informação | Profissional de TI
+Estudante de Sistemas de Informação · Profissional de TI
 
-- 📱 WhatsApp: [Entre em contato](https://cussati.dev/#contato)
-- 💻 GitHub: [ronaldcussati/rc.dev](https://github.com/ronald-cussati/rc.dev)
-- 💼 LinkedIn: [Ronald Cussati](https://www.linkedin.com/in/ronald-cussati/)
-- 📄 [Currículo]([https://cussati.dev/CurriculumRonaldCussati.pdf](https://cussati.dev/assets/Curriculum%20Ronald%20Cussati.pdf))
+- **WhatsApp:** [cussati.dev/#contato](https://cussati.dev/#contato)
+- **GitHub:** [ronald-cussati](https://github.com/ronald-cussati)
+- **LinkedIn:** [ronald-cussati](https://www.linkedin.com/in/ronald-cussati)
+- **Currículo:** [Download PDF](https://cussati.dev/assets/Curriculum%20Ronald%20Cussati.pdf)
+
+---
 
 ## Licença
 
-MIT License
+MIT License — Copyright (c) 2026 Ronald Cussati.
 
-Copyright (c) 2026 Ronald Cussati
+Permissão concedida para uso, cópia, modificação, fusão, publicação, distribuição e venda do software, desde que o aviso de direitos autorais e esta permissão sejam incluídos em todas as cópias.
 
-É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e da documentação associada (o "Software"), para lidar com o Software sem restrições, incluindo, sem limitação, os direitos de usar, copiar, modificar, fundir, publicar, distribuir, sublicenciar e/ou vender cópias do Software, e para permitir que as pessoas a quem o Software for fornecido o façam, sujeitas às seguintes condições:
-
-O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do Software.
-
-**O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO VIOLAÇÃO.** EM NENHUMA CIRCUNSTÂNCIA OS AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUAISQUER REIVINDICAÇÕES, DANOS OU OUTRAS RESPONSABILIDADES, SEJA EM AÇÃO CONTRATUAL, EXTRACONTRATUAL OU DE OUTRA NATUREZA, DECORRENTES DE, OU RELACIONADAS COM, O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES COM O SOFTWARE.**
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE QUALQUER TIPO.
