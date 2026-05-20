@@ -48,7 +48,6 @@
         <button class="lang-btn active" data-lang="pt" aria-pressed="true" tabindex="0">PT</button>
         <button class="lang-btn" data-lang="en" aria-pressed="false" tabindex="0">EN</button>
       </div>
-      <button class="mobile-menu-btn" aria-label="Abrir menu" id="mobileMenuBtn">☰</button>
     </div>
   </nav>
   <main id="main-content">
@@ -82,12 +81,10 @@
               <span data-pt="projetos →" data-en="projects →">projetos →</span>
             </a>
           </div>
-          </a>
         </div>
-      </div>
-      <div class="hero-image reveal">
-        <img src="assets/profile.webp" alt="Ronald Cussati — Desenvolvedor Front-end" loading="lazy">
-      </div>
+        <div class="hero-image reveal">
+          <img src="assets/profile.webp" alt="Ronald Cussati — Desenvolvedor Front-end" loading="lazy">
+        </div>
       </div>
       <canvas id="particlesCanvas" class="particles-canvas" aria-hidden="true"></canvas>
     </section>
@@ -398,36 +395,6 @@
   </footer>
   <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
   <script>
-    // ========== MOBILE IMPROVEMENTS ==========
-
-    // 1. Fechar menu ao scroll
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const menu = document.querySelector('.nav-links');
-      const btn = document.querySelector('.mobile-menu-btn');
-      if (menu && menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        if (btn) btn.classList.remove('active');
-      }
-    });
-
-    // 2. Fechar menu ao clicar fora
-    document.addEventListener('click', (e) => {
-      const menu = document.querySelector('.nav-links');
-      const btn = document.querySelector('.mobile-menu-btn');
-      if (menu && menu.classList.contains('active')) {
-        if (!menu.contains(e.target) && !btn?.contains(e.target)) {
-          menu.classList.remove('active');
-          if (btn) btn.classList.remove('active');
-        }
-      }
-    });
-
-    // 3. Reduzir partículas no mobile
-    if (window.innerWidth < 768) {
-      const canvas = document.querySelector('.particles-canvas');
-      if (canvas) canvas.style.opacity = '0.15';
-    }
 
     // ========== SCRIPT ==========
     // Reduced motion check
@@ -437,27 +404,21 @@
 
     // Language toggle
     function setLanguage(lang) {
-  document.querySelectorAll('[data-pt]').forEach((el) => {
-    const textNode = Array.from(el.childNodes).find(
-      node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
-    );
-    if (textNode) {
-      textNode.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
-    } else {
-      el.childNodes.forEach((node) => {
-        if (node.nodeType === Node.TEXT_NODE) {
-          node.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+      document.querySelectorAll('[data-pt]').forEach((el) => {
+        const textNode = Array.from(el.childNodes).find(
+          node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
+        );
+        if (textNode) {
+          textNode.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
         }
       });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive);
+      });
+      localStorage.setItem('lang', lang);
     }
-  });
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
-    const isActive = btn.dataset.lang === lang;
-    btn.classList.toggle('active', isActive);
-    btn.setAttribute('aria-pressed', isActive);
-  });
-  localStorage.setItem('lang', lang);
-}
 
     // Stats animation
     function easeOutCubic(t) {
@@ -572,16 +533,6 @@
         }
       });
     }, { threshold: 0.3 });
-
-    // Mobile menu
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-    mobileBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-open');
-      const isOpen = navLinks.classList.contains('mobile-open');
-      mobileBtn.textContent = isOpen ? '✕' : '☰';
-      mobileBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-    });
 
     // Lang toggle
     document.querySelectorAll('.lang-btn').forEach((btn) => {
