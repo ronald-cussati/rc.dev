@@ -78,14 +78,14 @@
             aria-label="Entrar em contato via WhatsApp">
             <span data-pt="entrar em contato" data-en="get in touch">entrar em contato</span>
           </a>
-        </div>
-        <div class="hero-buttons" style="margin-top: 0.75rem;">
-          <a href="assets/CurriculumRonaldCussati.pdf" class="btn btn-outline" download>
-            <span data-pt="currículo ↓" data-en="resume ↓">currículo ↓</span>
-          </a>
-          <a href="#projects" class="btn btn-outline">
-            <span data-pt="projetos →" data-en="projects →">projetos →</span>
-          </a>
+<div class="hero-buttons" style="margin-top: 0.75rem;">
+  <a href="assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf" id="resumeBtn" class="btn btn-outline" download="Curriculum_Vitae_Ronald_Cussati_PT.pdf">
+    <span data-pt="currículo ↓" data-en="resume ↓">currículo ↓</span>
+  </a>
+  <a href="#projects" class="btn btn-outline">
+    <span data-pt="projetos →" data-en="projects →">projetos →</span>
+  </a>
+</div>
         </div>
       </div>
       <div class="hero-image reveal">
@@ -418,6 +418,7 @@ let reducedMotion = mediaQuery.matches;
 mediaQuery.addListener((e) => { reducedMotion = e.matches; });
 
 function setLanguage(lang) {
+  // Traduz os elementos com data-pt / data-en
   document.querySelectorAll('[data-pt]').forEach((el) => {
     const textNode = Array.from(el.childNodes).find(
       node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
@@ -426,6 +427,20 @@ function setLanguage(lang) {
       textNode.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
     }
   });
+
+  // ── ALTERAÇÃO DINÂMICA DO CURRÍCULO ──
+  const resumeBtn = document.getElementById('resumeBtn');
+  if (resumeBtn) {
+    if (lang === 'pt') {
+      resumeBtn.setAttribute('href', 'assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf');
+      resumeBtn.setAttribute('download', 'Curriculum_Vitae_Ronald_Cussati_PT.pdf');
+    } else {
+      resumeBtn.setAttribute('href', 'assets/Curriculum_Vitae_Ronald_Cussati_EN.pdf');
+      resumeBtn.setAttribute('download', 'Curriculum_Vitae_Ronald_Cussati_EN.pdf');
+    }
+  }
+
+  // Atualiza o estado visual dos botões de idioma
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     const isActive = btn.dataset.lang === lang;
     btn.classList.toggle('active', isActive);
