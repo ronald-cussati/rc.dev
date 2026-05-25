@@ -1,12 +1,16 @@
 /* ── IMPORTS & RESET ── */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap');
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+/* ── RESET GLOBAL E PREVENÇÃO DE OVERFLOW ── */
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 :root {
@@ -1500,4 +1504,11 @@ hr.glow-divider {
     flex-direction: column;
     gap: 0.75rem;
   }
+}
+
+/* ── QUEBRA DE TEXTO AUTOMÁTICA ── */
+p, h1, h2, h3, h4, h5, h6, span, a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
