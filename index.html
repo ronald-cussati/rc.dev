@@ -110,19 +110,19 @@
               <a href="#projects" class="btn btn-primary">
                 <span data-pt="Ver projetos" data-en="View projects">Ver projetos</span>
               </a>
-              <a href="assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf" id="resumeBtn" class="btn btn-secondary" download="Curriculum_Vitae_Ronald_Cussati_PT.pdf">
-                <span data-pt="Currículo ↓" data-en="Resume ↓">Currículo ↓</span>
-              </a>
-              <a href="https://www.linkedin.com/in/ronald-cussati" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
-                <span>LinkedIn</span>
-                <span class="arrow" aria-hidden="true">→</span>
+              <a href="https://www.linkedin.com/in/ronald-cussati/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <span data-pt="LinkedIn" data-en="LinkedIn">LinkedIn</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7"/>
+                  <path d="M7 7h10v10"/>
+                </svg>
               </a>
             </div>
           </div>
         </div>
 
         <div class="hero-photo-wrapper reveal reveal-delay-1">
-          <div class="hero-photo-container parallax-element" data-speed="-0.012">
+          <div class="hero-photo-container">
             <div class="hero-photo-ambient" aria-hidden="true"></div>
             <div class="hero-photo-card">
               <img src="assets/portfolio/profile.png"
@@ -769,7 +769,6 @@
     if (window.matchMedia('(hover: none)').matches) return;
 
     const heroIntro = document.querySelector('.hero-intro');
-    const heroPhoto = document.querySelector('.hero-photo-container');
     const heroSection = document.querySelector('.hero');
     if (!heroIntro || !heroSection) return;
 
@@ -778,21 +777,13 @@
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
       heroIntro.style.transform = `translate(${x * 6}px, ${y * 4}px)`;
-      if (heroPhoto) {
-        heroPhoto.style.transform = `translate(${x * -6}px, ${y * -4}px)`;
-      }
     });
 
     heroSection.addEventListener('mouseleave', () => {
       heroIntro.style.transform = 'translate(0, 0)';
       heroIntro.style.transition = 'transform 0.5s ease';
-      if (heroPhoto) {
-        heroPhoto.style.transform = 'translate(0, 0)';
-        heroPhoto.style.transition = 'transform 0.5s ease';
-      }
       setTimeout(() => {
         heroIntro.style.transition = '';
-        if (heroPhoto) heroPhoto.style.transition = '';
       }, 500);
     });
   }
