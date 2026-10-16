@@ -147,17 +147,32 @@ a {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: -0.02em;
   color: var(--text-primary);
+  text-decoration: none;
   transition: opacity var(--duration) var(--ease);
 }
 .nav-logo:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
-.nav-logo .highlight {
+.nav-logo-img {
+  width: 32px;
+  height: auto;
+  aspect-ratio: 782 / 517;
+  display: block;
+  object-fit: contain;
+}
+.nav-logo-suffix {
   color: var(--accent);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .nav-links {

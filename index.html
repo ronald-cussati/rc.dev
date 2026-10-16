@@ -19,9 +19,15 @@
 <meta name="twitter:description" content="Desenvolvimento de software, aplicações web e produtos digitais.">
 <link rel="canonical" href="https://cussati.dev">
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<link rel="shortcut icon" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/favicon.png">
+<!-- Favicon & App Icons -->
+<link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+<meta name="theme-color" content="#0B0D12">
+<meta name="msapplication-TileColor" content="#0B0D12">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,8 +51,9 @@
 <!-- ═══ NAVIGATION ═══ -->
 <nav class="navbar" role="navigation" aria-label="Navegação principal">
   <div class="nav-content">
-    <a href="#main-content" class="nav-logo">
-      rc<span class="highlight">.dev</span>
+    <a href="#main-content" class="nav-logo" aria-label="rc.dev — Página inicial">
+      <img src="assets/branding/navbar-logo.png" alt="rc" class="nav-logo-img" width="32" height="21">
+      <span class="nav-logo-suffix">.dev</span>
     </a>
     <div class="nav-links" id="navLinks">
       <a href="#about" class="nav-link" data-pt="sobre" data-en="about">sobre</a>
