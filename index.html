@@ -3,22 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ronald Cussati — Desenvolvedor de Software & Produtos Digitais</title>
+<title>Ronald Cussati | Desenvolvedor Full-Stack</title>
 <meta name="description"
-  content="Portfólio de Ronald Cussati. Desenvolvimento de software, aplicações web e produtos digitais. Criador do Nossa Página, um SaaS em produção.">
-<meta property="og:title" content="Ronald Cussati — Desenvolvedor de Software">
-<meta property="og:description"
-  content="Desenvolvimento de software, aplicações web e produtos digitais. Criador do Nossa Página, um SaaS em produção.">
+  content="Portfólio de Ronald Cussati, desenvolvedor full-stack e estudante de Sistemas de Informação. Conheça projetos, experiências e o SaaS Nossa Página.">
+<meta name="author" content="Ronald Cussati">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cussati.dev/">
+
+<!-- Open Graph / LinkedIn / WhatsApp / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://cussati.dev">
-<meta property="og:image" content="https://cussati.dev/assets/portfolio/profile.png">
+<meta property="og:url" content="https://cussati.dev/">
+<meta property="og:title" content="Ronald Cussati | Desenvolvedor Full-Stack">
+<meta property="og:description"
+  content="Portfólio de Ronald Cussati, desenvolvedor full-stack e estudante de Sistemas de Informação. Conheça projetos, experiências e o SaaS Nossa Página.">
+<meta property="og:image" content="https://cussati.dev/assets/og-image.png">
+<meta property="og:image:secure_url" content="https://cussati.dev/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ronald Cussati — Desenvolvedor Full-Stack · Portfólio">
+<meta property="og:site_name" content="cussati.dev">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:locale:alternate" content="en_US">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ronald Cussati — Desenvolvedor de Software">
-<meta name="twitter:description" content="Desenvolvimento de software, aplicações web e produtos digitais.">
-<link rel="canonical" href="https://cussati.dev">
+
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://cussati.dev/">
+<meta name="twitter:title" content="Ronald Cussati | Desenvolvedor Full-Stack">
+<meta name="twitter:description"
+  content="Portfólio de Ronald Cussati, desenvolvedor full-stack e estudante de Sistemas de Informação. Conheça projetos, experiências e o SaaS Nossa Página.">
+<meta name="twitter:image" content="https://cussati.dev/assets/og-image.png">
+<meta name="twitter:image:alt" content="Ronald Cussati — Desenvolvedor Full-Stack · Portfólio">
+
 <link rel="stylesheet" href="styles.css">
+
 <!-- Favicon & App Icons -->
 <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -28,16 +46,50 @@
 <link rel="manifest" href="assets/favicon/site.webmanifest">
 <meta name="theme-color" content="#0B0D12">
 <meta name="msapplication-TileColor" content="#0B0D12">
+
+<!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ronald Cussati",
-  "givenName": "Ronald",
-  "jobTitle": "Software Developer",
-  "url": "https://cussati.dev",
-  "sameAs": ["https://github.com/ronald-cussati", "https://www.linkedin.com/in/ronald-cussati"],
-  "knowsAbout": ["HTML5", "CSS3", "JavaScript", "React", "Supabase", "Python", "SQL", "Git", "GitHub", "Web Development", "SaaS", "Product Development"]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://cussati.dev/#website",
+      "url": "https://cussati.dev/",
+      "name": "Ronald Cussati | Desenvolvedor Full-Stack",
+      "description": "Portfólio de Ronald Cussati, desenvolvedor full-stack e estudante de Sistemas de Informação. Conheça projetos, experiências e o SaaS Nossa Página.",
+      "inLanguage": ["pt-BR", "en"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://cussati.dev/#person",
+      "name": "Ronald Cussati",
+      "givenName": "Ronald",
+      "familyName": "Cussati",
+      "url": "https://cussati.dev/",
+      "jobTitle": "Desenvolvedor Full-Stack",
+      "image": "https://cussati.dev/assets/portfolio/profile.png",
+      "sameAs": [
+        "https://github.com/ronald-cussati",
+        "https://www.linkedin.com/in/ronald-cussati/"
+      ],
+      "knowsAbout": [
+        "Desenvolvimento Web",
+        "Full-Stack Development",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "TanStack Start",
+        "Supabase",
+        "HTML5",
+        "CSS3",
+        "Python",
+        "SQL",
+        "Git",
+        "SaaS"
+      ]
+    }
+  ]
 }
 </script>
 </head>
@@ -268,12 +320,8 @@
           <div class="featured-project-actions">
             <a href="https://www.nossapagina.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
               <span data-pt="Visitar produto" data-en="Visit product">Visitar produto</span>
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">↗</span>
             </a>
-            <button class="case-study-toggle" id="caseToggle" aria-expanded="false" aria-controls="casePanel">
-              <span data-pt="Detalhes técnicos" data-en="Technical details">Detalhes técnicos</span>
-              <span class="toggle-icon" aria-hidden="true">▼</span>
-            </button>
           </div>
         </div>
       </div>
@@ -303,6 +351,20 @@
                width="1024"
                height="483">
         </div>
+      </div>
+
+      <!-- Case study contextual bar & toggle -->
+      <div class="case-study-bar">
+        <div class="case-study-bar-label">
+          <span class="case-study-bar-dot" aria-hidden="true"></span>
+          <span data-pt="Case técnico" data-en="Technical case">Case técnico</span>
+        </div>
+        <button type="button" class="case-study-toggle" id="caseToggle" aria-expanded="false" aria-controls="casePanel">
+          <span data-pt="Detalhes técnicos" data-en="Technical details">Detalhes técnicos</span>
+          <svg class="toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
       </div>
 
       <!-- Case study panel -->
@@ -702,8 +764,11 @@
       btn.setAttribute('aria-pressed', isActive);
     });
 
-    // Update html lang
+    // Update html lang & title
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.title = lang === 'pt'
+      ? 'Ronald Cussati | Desenvolvedor Full-Stack'
+      : 'Ronald Cussati | Full-Stack Developer';
 
     localStorage.setItem('lang', lang);
   }
@@ -836,8 +901,8 @@
     caseToggle.addEventListener('click', () => {
       const isOpen = casePanel.classList.toggle('open');
       caseToggle.classList.toggle('expanded', isOpen);
-      caseToggle.setAttribute('aria-expanded', isOpen);
-      casePanel.setAttribute('aria-hidden', !isOpen);
+      caseToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      casePanel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     });
   }
 

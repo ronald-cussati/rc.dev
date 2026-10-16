@@ -1,0 +1,7 @@
+# Audit screenshots and reports
+assets/audit/
+
+# Temporary and OS files
+*.log
+.DS_Store
+Thumbs.db
