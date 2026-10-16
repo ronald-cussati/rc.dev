@@ -33,7 +33,13 @@
 <meta name="twitter:description"
   content="Portfólio de Ronald Cussati, desenvolvedor full-stack e estudante de Sistemas de Informação. Conheça projetos, experiências e o SaaS Nossa Página.">
 <meta name="twitter:image" content="https://cussati.dev/assets/og-image.png">
-<meta name="twitter:image:alt" content="Ronald Cussati — Desenvolvedor Full-Stack · Portfólio">
+<!-- Google Fonts & Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+<!-- Preload LCP Hero Image -->
+<link rel="preload" as="image" href="assets/portfolio/profile.webp" type="image/webp" fetchpriority="high">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -104,7 +110,10 @@
 <nav class="navbar" role="navigation" aria-label="Navegação principal">
   <div class="nav-content">
     <a href="#main-content" class="nav-logo" aria-label="rc.dev — Página inicial">
-      <img src="assets/branding/navbar-logo.png" alt="rc" class="nav-logo-img" width="32" height="21">
+      <picture>
+        <source srcset="assets/branding/navbar-logo.webp" type="image/webp">
+        <img src="assets/branding/navbar-logo.png" alt="rc" class="nav-logo-img" width="32" height="21" decoding="async">
+      </picture>
       <span class="nav-logo-suffix">.dev</span>
     </a>
     <div class="nav-links" id="navLinks">
@@ -119,7 +128,7 @@
         <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
     </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+    <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -177,13 +186,17 @@
           <div class="hero-photo-container">
             <div class="hero-photo-ambient" aria-hidden="true"></div>
             <div class="hero-photo-card">
-              <img src="assets/portfolio/profile.png"
-                   alt="Ronald Cussati — Desenvolvedor de Software"
-                   class="hero-photo-img"
-                   width="707"
-                   height="827"
-                   loading="eager"
-                   fetchpriority="high">
+              <picture>
+                <source srcset="assets/portfolio/profile.webp" type="image/webp">
+                <img src="assets/portfolio/profile.png"
+                     alt="Ronald Cussati — Desenvolvedor de Software"
+                     class="hero-photo-img"
+                     width="707"
+                     height="827"
+                     loading="eager"
+                     fetchpriority="high"
+                     decoding="async">
+              </picture>
               <div class="hero-photo-overlay" aria-hidden="true"></div>
             </div>
           </div>
@@ -224,7 +237,7 @@
             </svg>
           </div>
           <div class="about-highlight-text">
-            <h4 data-pt="Desenvolvimento Full-Stack" data-en="Full-Stack Development">Desenvolvimento Full-Stack</h4>
+            <h3 data-pt="Desenvolvimento Full-Stack" data-en="Full-Stack Development">Desenvolvimento Full-Stack</h3>
             <p data-pt="Front-end, back-end, banco de dados e deploy." data-en="Front-end, back-end, database and deployment.">Front-end, back-end, banco de dados e deploy.</p>
           </div>
         </div>
@@ -237,7 +250,7 @@
             </svg>
           </div>
           <div class="about-highlight-text">
-            <h4 data-pt="Produto em Produção" data-en="Product in Production">Produto em Produção</h4>
+            <h3 data-pt="Produto em Produção" data-en="Product in Production">Produto em Produção</h3>
             <p data-pt="SaaS lançado, operando e com recepção positiva." data-en="SaaS launched, operating and well-received.">SaaS lançado, operando e com recepção positiva.</p>
           </div>
         </div>
@@ -250,7 +263,7 @@
             </svg>
           </div>
           <div class="about-highlight-text">
-            <h4 data-pt="Comunicação Bilíngue" data-en="Bilingual Communication">Comunicação Bilíngue</h4>
+            <h3 data-pt="Comunicação Bilíngue" data-en="Bilingual Communication">Comunicação Bilíngue</h3>
             <p data-pt="Português e inglês avançado." data-en="Portuguese and advanced English.">Português e inglês avançado.</p>
           </div>
         </div>
@@ -344,12 +357,16 @@
           <div class="browser-chrome-spacer"></div>
         </div>
         <div class="browser-viewport">
-          <img src="assets/portfolio/nossa-pagina-home.png"
-               alt="Homepage do Nossa Página — Plataforma SaaS em produção"
-               class="featured-screenshot-img"
-               loading="lazy"
-               width="1024"
-               height="483">
+          <picture>
+            <source srcset="assets/portfolio/nossa-pagina-home.webp" type="image/webp">
+            <img src="assets/portfolio/nossa-pagina-home.png"
+                 alt="Homepage do Nossa Página — Plataforma SaaS em produção"
+                 class="featured-screenshot-img"
+                 loading="lazy"
+                 decoding="async"
+                 width="1024"
+                 height="483">
+          </picture>
         </div>
       </div>
 
@@ -858,12 +875,16 @@
     const bar = document.getElementById('scrollProgress');
     if (!bar) return;
 
+    let docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    window.addEventListener('resize', () => {
+      docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    }, { passive: true });
+
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
         requestAnimationFrame(() => {
           const scrollTop = window.scrollY;
-          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
           const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
           bar.style.width = `${progress}%`;
           ticking = false;
@@ -881,6 +902,7 @@
     mobileBtn.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('active');
       mobileBtn.classList.toggle('active');
+      mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       mobileBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
     });
 
@@ -888,6 +910,7 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         mobileBtn.classList.remove('active');
+        mobileBtn.setAttribute('aria-expanded', 'false');
         mobileBtn.setAttribute('aria-label', 'Abrir menu');
       });
     });

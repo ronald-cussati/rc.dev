@@ -3,9 +3,6 @@
    Ronald Cussati · Portfolio Redesign 2026
    ══════════════════════════════════════════ */
 
-/* ── FONTS ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 /* ── RESET ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -30,7 +27,7 @@ html, body {
   --border-hover: #3A4456;
   --text-primary: #F1F4F8;
   --text-secondary: #A6B1C2;
-  --text-tertiary: #6B7A90;
+  --text-tertiary: #7E8D9F;
   --accent: #7395CC;
   --accent-dim: rgba(115, 149, 204, 0.12);
   --accent-glow: rgba(115, 149, 204, 0.08);
@@ -602,6 +599,7 @@ a {
   stroke: var(--accent);
 }
 
+.about-highlight-text h3,
 .about-highlight-text h4 {
   font-size: 0.875rem;
   font-weight: 600;
