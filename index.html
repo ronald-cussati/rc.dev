@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio - rc.dev — Ronald Cussati | Profissional de TI</title>
+<title>Ronald Cussati — Desenvolvedor de Software & Produtos Digitais</title>
 <meta name="description"
-  content="Profissional de TI especializado em suporte técnico, help desk e desenvolvimento web. Buscando estágio remoto.">
-<meta property="og:title" content="Portfólio - rc.dev — Ronald Cussati">
+  content="Portfólio de Ronald Cussati. Desenvolvimento de software, aplicações web e produtos digitais. Criador do Nossa Página, um SaaS em produção.">
+<meta property="og:title" content="Ronald Cussati — Desenvolvedor de Software">
 <meta property="og:description"
-  content="Profissional de TI especializado em suporte técnico, help desk e desenvolvimento web. Buscando estágio remoto.">
+  content="Desenvolvimento de software, aplicações web e produtos digitais. Criador do Nossa Página, um SaaS em produção.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ronald-cussati.github.io/rc.dev/">
-<meta property="og:image" content="https://ronald-cussati.github.io/rc.dev/assets/profile.webp">
-<link rel="canonical" href="https://ronald-cussati.github.io/rc.dev/">
+<meta property="og:url" content="https://cussati.dev">
+<meta property="og:image" content="https://cussati.dev/assets/profile.webp">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ronald Cussati — Desenvolvedor de Software">
+<meta name="twitter:description" content="Desenvolvimento de software, aplicações web e produtos digitais.">
+<link rel="canonical" href="https://cussati.dev">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
 <link rel="shortcut icon" href="assets/favicon.png">
@@ -23,32 +28,38 @@
   "@type": "Person",
   "name": "Ronald Cussati",
   "givenName": "Ronald",
-  "jobTitle": "IT Professional",
+  "jobTitle": "Software Developer",
   "url": "https://cussati.dev",
   "sameAs": ["https://github.com/ronald-cussati", "https://www.linkedin.com/in/ronald-cussati"],
-  "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Python", "C", "Git", "GitHub", "Web Design", "Responsive Design", "AI / Prompt Engineering", "Azure AI", "Shopify", "Suporte Técnico", "Help Desk", "Video Editor"]
+  "knowsAbout": ["HTML5", "CSS3", "JavaScript", "React", "Supabase", "Python", "SQL", "Git", "GitHub", "Web Development", "SaaS", "Product Development"]
 }
 </script>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
 
+<a href="#main-content" class="skip-link" data-pt="Pular para conteúdo principal" data-en="Skip to main content">Pular para conteúdo principal</a>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ═══ NAVIGATION ═══ -->
 <nav class="navbar" role="navigation" aria-label="Navegação principal">
   <div class="nav-content">
     <a href="#main-content" class="nav-logo">
       rc<span class="highlight">.dev</span>
     </a>
-<nav class="nav-links" id="navLinks">
-  <a href="#about" class="nav-link" data-pt="sobre" data-en="about">sobre</a>
-  <a href="#projects" class="nav-link" data-pt="projetos" data-en="projects">projetos</a>
-  <a href="#legacy" class="nav-link" data-pt="legado" data-en="legacy">legado</a>
-  <a href="#experience" class="nav-link" data-pt="experiência" data-en="experience">experiência</a>
-  <a href="#contact" class="nav-link" data-pt="contato" data-en="contact">contato</a>
-  <div class="lang-toggle">
-    <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
-    <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-  </div>
-</nav>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link" data-pt="sobre" data-en="about">sobre</a>
+      <a href="#projects" class="nav-link" data-pt="projetos" data-en="projects">projetos</a>
+      <a href="#skills" class="nav-link" data-pt="competências" data-en="skills">competências</a>
+      <a href="#experience" class="nav-link" data-pt="experiência" data-en="experience">experiência</a>
+      <a href="#education" class="nav-link" data-pt="formação" data-en="education">formação</a>
+      <a href="#contact" class="nav-link" data-pt="contato" data-en="contact">contato</a>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -57,119 +68,336 @@
   </div>
 </nav>
 
+<!-- ═══ MAIN CONTENT ═══ -->
 <main id="main-content">
 
+  <!-- ═══ HERO ═══ -->
   <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-gradient parallax-element" data-speed="0.02"></div>
+      <div class="hero-bg-gradient-2 parallax-element" data-speed="-0.015"></div>
+      <div class="hero-bg-line parallax-element" data-speed="0.01"></div>
+    </div>
+
     <div class="hero-content">
-      <div class="hero-text reveal">
-        <span class="hero-tag" data-pt="profissional de TI" data-en="IT professional">profissional de TI</span>
-        <span class="hero-availability" data-pt="disponível para estágio remoto" data-en="available for remote internship">
-          <span class="status-dot"></span>
-          disponível para estágio
+      <div class="hero-intro reveal">
+        <span class="hero-label" data-pt="Desenvolvimento de software" data-en="Software development">
+          <span class="hero-label-dot" aria-hidden="true"></span>
+          Desenvolvimento de software
         </span>
-        <h1>Ronald<br><span class="highlight">Cussati</span></h1>
-        <p class="hero-subtitle"
-          data-pt="Suporte técnico, help desk, desenvolvimento web e operações de e-commerce, mais de 5 anos de mercado digital com atendimento internacional bilíngue."
-          data-en="Technical support, help desk, web development and e-commerce operations, over 5 years in the digital market with bilingual international customer service.">
-          Suporte técnico, help desk, desenvolvimento web e operações de e-commerce, mais de 5 anos de mercado digital com atendimento internacional bilíngue.
+
+        <h1>
+          Ronald Cussati<br>
+          <span class="subtle" data-pt="Aplicações web e produtos digitais." data-en="Web applications and digital products.">Aplicações web e produtos digitais.</span>
+        </h1>
+
+        <p class="hero-description"
+          data-pt="Estudante de Sistemas de Informação, desenvolvo soluções web de ponta a ponta — do front-end ao back-end. Criei e lancei o Nossa Página, um SaaS em produção com mais de 10.000 presentes digitais criados."
+          data-en="Information Systems student, I build end-to-end web solutions — from front-end to back-end. I created and launched Nossa Página, a SaaS in production with over 10,000 digital gifts created.">
+          Estudante de Sistemas de Informação, desenvolvo soluções web de ponta a ponta — do front-end ao back-end. Criei e lancei o Nossa Página, um SaaS em produção com mais de 10.000 presentes digitais criados.
         </p>
-        <div class="hero-buttons">
-          <a href="https://wa.me/5511992485378" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
-            aria-label="Entrar em contato via WhatsApp">
-            <span data-pt="entrar em contato" data-en="get in touch">entrar em contato</span>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span data-pt="Ver projetos" data-en="View projects">Ver projetos</span>
           </a>
-<div class="hero-buttons" style="margin-top: 0.75rem;">
-  <a href="assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf" id="resumeBtn" class="btn btn-outline" download="Curriculum_Vitae_Ronald_Cussati_PT.pdf">
-    <span data-pt="currículo ↓" data-en="resume ↓">currículo ↓</span>
-  </a>
-  <a href="#projects" class="btn btn-outline">
-    <span data-pt="projetos →" data-en="projects →">projetos →</span>
-  </a>
-</div>
+          <a href="assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf" id="resumeBtn" class="btn btn-secondary" download="Curriculum_Vitae_Ronald_Cussati_PT.pdf">
+            <span data-pt="Currículo ↓" data-en="Resume ↓">Currículo ↓</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ronald-cussati" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
-      <div class="hero-image reveal">
-        <img src="assets/profile.webp" alt="Ronald Cussati — Desenvolvedor Front-end" loading="lazy">
-      </div>
     </div>
-    <canvas id="particlesCanvas" class="particles-canvas" aria-hidden="true"></canvas>
   </section>
 
-  <section id="about" class="section reveal">
-    <span class="section-label" data-pt="sobre mim" data-en="about me">sobre mim</span>
-    <h2 class="section-title" data-pt="Tecnologia e atendimento desde 2020" data-en="Technology and service since 2020">
-      Tecnologia e atendimento desde 2020
-    </h2>
+  <!-- ═══ ABOUT ═══ -->
+  <hr class="section-divider">
+  <section id="about" class="section">
+    <div class="section-header reveal">
+      <span class="section-number" data-pt="01 — Sobre" data-en="01 — About">01 — Sobre</span>
+      <h2 class="section-title" data-pt="Desenvolvimento, produto e operação" data-en="Development, product and operations">Desenvolvimento, produto e operação</h2>
+    </div>
+
     <div class="about-content">
-      <p class="about-text"
-        data-pt="Sou Ronald Cussati, profissional de TI com experiência prática em suporte técnico remoto, desenvolvimento web e operações de e-commerce. Desde 2020, atuo no mercado digital oferecendo atendimento direto a clientes internacionais via AnyDesk, suporte help desk e gestão de comunidades."
-        data-en="I'm Ronald Cussati, an IT professional with hands-on experience in remote technical support, web development, and e-commerce operations. Since 2020, I've been serving international clients directly via AnyDesk, help desk support, and community management.">
-        Sou Ronald Cussati, profissional de TI com experiência prática em suporte técnico remoto, desenvolvimento web e operações de e-commerce. Desde 2020, atuo no mercado digital oferecendo atendimento direto a clientes internacionais via AnyDesk, suporte help desk e gestão de comunidades.
-      </p>
-      <p class="about-text"
-        data-pt="Com forte capacidade de comunicação bilíngue (português/inglês) e visão ampla de TI — do hardware ao software, do atendimento ao desenvolvimento — busco estágio remoto em help desk, suporte técnico ou áreas correlatas de tecnologia."
-        data-en="With strong bilingual communication skills (Portuguese/English) and a broad IT vision — from hardware to software, from customer service to development — I'm seeking a remote internship in help desk, technical support, or related technology areas.">
-        Com forte capacidade de comunicação bilíngue (português/inglês) e visão ampla de TI — do hardware ao software, do atendimento ao desenvolvimento — busco estágio remoto em help desk, suporte técnico ou áreas correlatas de tecnologia.
-      </p>
-    </div>
+      <div class="reveal">
+        <p class="about-text"
+          data-pt="Sou Ronald Cussati, desenvolvedor de software com experiência prática na criação de produtos digitais. Combino desenvolvimento front-end e back-end com visão de produto, experiência do usuário e operação de sistemas."
+          data-en="I'm Ronald Cussati, a software developer with hands-on experience building digital products. I combine front-end and back-end development with product vision, user experience and systems operations.">
+          Sou Ronald Cussati, desenvolvedor de software com experiência prática na criação de produtos digitais. Combino desenvolvimento front-end e back-end com visão de produto, experiência do usuário e operação de sistemas.
+        </p>
+        <p class="about-text"
+          data-pt="Minha trajetória inclui desenvolvimento web, suporte técnico a sistemas empresariais, operações de e-commerce com atendimento internacional bilíngue e o lançamento de um SaaS em produção — o Nossa Página."
+          data-en="My background includes web development, technical support for enterprise systems, e-commerce operations with bilingual international support, and launching a SaaS product — Nossa Página.">
+          Minha trajetória inclui desenvolvimento web, suporte técnico a sistemas empresariais, operações de e-commerce com atendimento internacional bilíngue e o lançamento de um SaaS em produção — o Nossa Página.
+        </p>
+      </div>
 
-    <div class="stats-grid">
-      <div class="stat">
-        <span class="stat-num">HTML · CSS · JS<br>Python · SQL</span>
-        <div class="stat-label">
-          <span data-pt="Full Stack em formação" data-en="Full Stack in training">Full Stack em formação</span>
+      <div class="about-highlights reveal reveal-delay-1">
+        <div class="about-highlight">
+          <div class="about-highlight-icon" aria-hidden="true">⚙</div>
+          <div class="about-highlight-text">
+            <h4 data-pt="Desenvolvimento Full-Stack" data-en="Full-Stack Development">Desenvolvimento Full-Stack</h4>
+            <p data-pt="Front-end, back-end, banco de dados e deploy." data-en="Front-end, back-end, database and deployment.">Front-end, back-end, banco de dados e deploy.</p>
+          </div>
         </div>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-pt="Sistemas de Informação" data-en="Information Systems">Sistemas de Informação</span>
-        <div class="stat-label">
-          <span data-pt="Multivix · 4º período" data-en="Multivix · 4th semester">Multivix · 4º período</span>
+        <div class="about-highlight">
+          <div class="about-highlight-icon" aria-hidden="true">📦</div>
+          <div class="about-highlight-text">
+            <h4 data-pt="Produto em Produção" data-en="Product in Production">Produto em Produção</h4>
+            <p data-pt="SaaS lançado, operando e com recepção positiva." data-en="SaaS launched, operating and well-received.">SaaS lançado, operando e com recepção positiva.</p>
+          </div>
         </div>
-      </div>
-      <div class="stat">
-        <span class="stat-num" data-pt="Estágio Remoto" data-en="Remote Internship">Estágio Remoto</span>
-        <div class="stat-label">
-          <span data-pt="100% disponível" data-en="100% available">100% disponível</span>
-        </div>
-      </div>
-      <div class="stat">
-        <span class="stat-num">PT · EN</span>
-        <div class="stat-label">
-          <span data-pt="Inglês Avançado" data-en="Advanced English">Inglês Avançado</span>
+        <div class="about-highlight">
+          <div class="about-highlight-icon" aria-hidden="true">🌐</div>
+          <div class="about-highlight-text">
+            <h4 data-pt="Comunicação Bilíngue" data-en="Bilingual Communication">Comunicação Bilíngue</h4>
+            <p data-pt="Português e inglês avançado." data-en="Portuguese and advanced English.">Português e inglês avançado.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="section reveal">
-    <span class="section-label" data-pt="tecnologias" data-en="technologies">tecnologias</span>
-    <h2 class="section-title" data-pt="Stack técnica" data-en="Tech stack">Stack técnica</h2>
-    <div class="skills-categories">
+  <!-- ═══ PROJECTS ═══ -->
+  <hr class="section-divider">
+  <section id="projects" class="section">
+    <div class="section-header reveal">
+      <span class="section-number" data-pt="02 — Projetos" data-en="02 — Projects">02 — Projetos</span>
+      <h2 class="section-title" data-pt="Projetos em destaque" data-en="Featured projects">Projetos em destaque</h2>
+      <p class="section-subtitle"
+        data-pt="Projetos que demonstram capacidade técnica, visão de produto e execução."
+        data-en="Projects that demonstrate technical ability, product vision and execution.">
+        Projetos que demonstram capacidade técnica, visão de produto e execução.
+      </p>
+    </div>
 
+    <!-- ── Nossa Página — Featured Project ── -->
+    <div class="featured-project reveal">
+      <div class="featured-project-inner">
+        <div class="featured-project-info">
+          <span class="featured-project-label">
+            <span class="featured-project-label-dot" aria-hidden="true"></span>
+            <span data-pt="Projeto principal" data-en="Main project">Projeto principal</span>
+          </span>
+
+          <h3 class="featured-project-title">Nossa Página</h3>
+
+          <p class="featured-project-desc"
+            data-pt="Plataforma SaaS para criação de presentes digitais personalizados. Desenvolvi o produto de ponta a ponta — front-end, back-end, banco de dados, experiência do usuário e publicação em produção. Lançado em junho de 2026, o produto alcançou mais de 10.000 presentes criados e nota 4.9 com mais de 2.300 avaliações, segundo os dados exibidos publicamente na plataforma."
+            data-en="SaaS platform for creating personalized digital gifts. I built the product end-to-end — front-end, back-end, database, user experience and production deployment. Launched in June 2026, the product reached over 10,000 gifts created and a 4.9 rating with 2,300+ reviews, according to data publicly displayed on the platform.">
+            Plataforma SaaS para criação de presentes digitais personalizados. Desenvolvi o produto de ponta a ponta — front-end, back-end, banco de dados, experiência do usuário e publicação em produção. Lançado em junho de 2026, o produto alcançou mais de 10.000 presentes criados e nota 4.9 com mais de 2.300 avaliações, segundo os dados exibidos publicamente na plataforma.
+          </p>
+
+          <div class="featured-project-meta">
+            <div class="featured-meta-item">
+              <span class="featured-meta-label" data-pt="Lançamento" data-en="Launch">Lançamento</span>
+              <span class="featured-meta-value" data-pt="Junho 2026" data-en="June 2026">Junho 2026</span>
+            </div>
+            <div class="featured-meta-item">
+              <span class="featured-meta-label" data-pt="Tipo" data-en="Type">Tipo</span>
+              <span class="featured-meta-value">SaaS</span>
+            </div>
+            <div class="featured-meta-item">
+              <span class="featured-meta-label" data-pt="Papel" data-en="Role">Papel</span>
+              <span class="featured-meta-value" data-pt="Full-Stack Dev" data-en="Full-Stack Dev">Full-Stack Dev</span>
+            </div>
+            <div class="featured-meta-item">
+              <span class="featured-meta-label" data-pt="Avaliação" data-en="Rating">Avaliação</span>
+              <span class="featured-meta-value">★ 4.9 (2.300+)</span>
+            </div>
+          </div>
+
+          <div class="featured-project-tags">
+            <span class="tag">React</span>
+            <span class="tag">TanStack Start</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">Full-Stack</span>
+          </div>
+
+          <div class="featured-project-actions">
+            <a href="https://www.nossapagina.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <span data-pt="Visitar produto" data-en="Visit product">Visitar produto</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <button class="case-study-toggle" id="caseToggle" aria-expanded="false" aria-controls="casePanel">
+              <span data-pt="Detalhes técnicos" data-en="Technical details">Detalhes técnicos</span>
+              <span class="toggle-icon" aria-hidden="true">▼</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="featured-project-image">
+          <img src="assets/nossapagina-preview.jpg"
+               alt="Nossa Página — Plataforma SaaS de presentes digitais"
+               loading="lazy"
+               width="560" height="480">
+        </div>
+      </div>
+
+      <!-- Case study panel -->
+      <div class="case-study-panel" id="casePanel" aria-hidden="true">
+        <div class="case-study-content">
+          <div class="case-study-flow">
+            <div class="case-step">
+              <span class="case-step-num" data-pt="01 Problema" data-en="01 Problem">01 Problema</span>
+              <h4 data-pt="Oportunidade de mercado" data-en="Market opportunity">Oportunidade de mercado</h4>
+              <p data-pt="Pessoas buscavam formas criativas de presentear alguém especial com lembranças digitais personalizadas."
+                 data-en="People were looking for creative ways to gift someone special with personalized digital memories.">
+                Pessoas buscavam formas criativas de presentear alguém especial com lembranças digitais personalizadas.
+              </p>
+            </div>
+            <div class="case-step">
+              <span class="case-step-num" data-pt="02 Solução" data-en="02 Solution">02 Solução</span>
+              <h4 data-pt="Plataforma de criação" data-en="Creation platform">Plataforma de criação</h4>
+              <p data-pt="Desenvolvimento de um SaaS que permite criar páginas digitais com fotos, músicas, contadores e linha do tempo."
+                 data-en="Development of a SaaS that allows creating digital pages with photos, music, counters and timelines.">
+                Desenvolvimento de um SaaS que permite criar páginas digitais com fotos, músicas, contadores e linha do tempo.
+              </p>
+            </div>
+            <div class="case-step">
+              <span class="case-step-num" data-pt="03 Desenvolvimento" data-en="03 Development">03 Desenvolvimento</span>
+              <h4 data-pt="Implementação full-stack" data-en="Full-stack implementation">Implementação full-stack</h4>
+              <p data-pt="Front-end em React com TanStack Start, back-end integrado com Supabase, deploy na Vercel. Fluxo de criação guiado, planos comerciais e compartilhamento por link e QR Code."
+                 data-en="React front-end with TanStack Start, back-end integrated with Supabase, deployed on Vercel. Guided creation flow, commercial plans and sharing via link and QR Code.">
+                Front-end em React com TanStack Start, back-end integrado com Supabase, deploy na Vercel. Fluxo de criação guiado, planos comerciais e compartilhamento por link e QR Code.
+              </p>
+            </div>
+            <div class="case-step">
+              <span class="case-step-num" data-pt="04 Resultados" data-en="04 Results">04 Resultados</span>
+              <h4 data-pt="Produto em operação" data-en="Product in operation">Produto em operação</h4>
+              <p data-pt="Mais de 10.000 presentes criados e nota 4.9 com 2.300+ avaliações na plataforma. Dados verificados publicamente no site."
+                 data-en="Over 10,000 gifts created and 4.9 rating with 2,300+ reviews on the platform. Data publicly verified on the website.">
+                Mais de 10.000 presentes criados e nota 4.9 com 2.300+ avaliações na plataforma. Dados verificados publicamente no site.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Other Projects ── -->
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <div class="project-card-header">
+          <span class="project-number">02</span>
+          <span class="project-badge" data-pt="Web App" data-en="Web App">Web App</span>
+        </div>
+        <h3 class="project-title" data-pt="PromptAI — Gerador de Prompts" data-en="PromptAI — Prompt Generator">PromptAI — Gerador de Prompts</h3>
+        <p class="project-desc"
+          data-pt="Aplicação web para gerar prompts otimizados para modelos de IA como ChatGPT, Claude, Perplexity e Midjourney. Interface intuitiva com categorização e estruturação de prompts."
+          data-en="Web application for generating optimized prompts for AI models like ChatGPT, Claude, Perplexity and Midjourney. Intuitive interface with prompt categorization and structuring.">
+          Aplicação web para gerar prompts otimizados para modelos de IA como ChatGPT, Claude, Perplexity e Midjourney. Interface intuitiva com categorização e estruturação de prompts.
+        </p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">AI</span>
+          <span class="tag">Prompt Engineering</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ronald-cussati/promptai" class="project-link" target="_blank" rel="noopener noreferrer">
+            GitHub <span aria-hidden="true">→</span>
+          </a>
+          <a href="https://ronald-cussati.github.io/promptai/" class="project-link" target="_blank" rel="noopener noreferrer"
+            data-pt="Demonstração" data-en="Demo">
+            Demonstração <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-card-header">
+          <span class="project-number">03</span>
+          <span class="project-badge" data-pt="E-commerce · Encerrado" data-en="E-commerce · Closed">E-commerce · Encerrado</span>
+        </div>
+        <h3 class="project-title">WONKA</h3>
+        <p class="project-desc"
+          data-pt="E-commerce internacional na Shopify com produtos digitais. Automações em Python, C e C# para entregas, inventário e suporte. Mais de 1.800 pedidos processados e comunidade de 5.000+ usuários no Discord."
+          data-en="International e-commerce on Shopify with digital products. Automations in Python, C and C# for deliveries, inventory and support. Over 1,800 orders processed and community of 5,000+ users on Discord.">
+          E-commerce internacional na Shopify com produtos digitais. Automações em Python, C e C# para entregas, inventário e suporte. Mais de 1.800 pedidos processados e comunidade de 5.000+ usuários no Discord.
+        </p>
+        <div class="project-tags">
+          <span class="tag">Shopify</span>
+          <span class="tag">Python</span>
+          <span class="tag">C#</span>
+          <span class="tag" data-pt="Automação" data-en="Automation">Automação</span>
+          <span class="tag">E-commerce</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link" style="cursor: default;" data-pt="✓ Projeto encerrado" data-en="✓ Project closed">✓ Projeto encerrado</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-card-header">
+          <span class="project-number">04</span>
+          <span class="project-badge" data-pt="Portfólio" data-en="Portfolio">Portfólio</span>
+        </div>
+        <h3 class="project-title">rc.dev</h3>
+        <p class="project-desc"
+          data-pt="Este portfólio. Design dark minimalista com parallax, responsividade completa, sistema de tradução PT/EN, acessibilidade e foco em performance."
+          data-en="This portfolio. Dark minimalist design with parallax, full responsiveness, PT/EN translation system, accessibility and performance focus.">
+          Este portfólio. Design dark minimalista com parallax, responsividade completa, sistema de tradução PT/EN, acessibilidade e foco em performance.
+        </p>
+        <div class="project-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ronald-cussati/rc.dev" class="project-link" target="_blank" rel="noopener noreferrer">
+            GitHub <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <hr class="section-divider">
+  <section id="skills" class="section">
+    <div class="section-header reveal">
+      <span class="section-number" data-pt="03 — Competências" data-en="03 — Skills">03 — Competências</span>
+      <h2 class="section-title" data-pt="Competências técnicas" data-en="Technical skills">Competências técnicas</h2>
+    </div>
+
+    <div class="skills-layout reveal">
       <div class="skill-group">
         <span class="skill-group-label" data-pt="Front-end" data-en="Front-end">Front-end</span>
         <div class="skill-tags-row">
           <span class="skill-tag">HTML5</span>
           <span class="skill-tag">CSS3</span>
           <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
           <span class="skill-tag" data-pt="Design Responsivo" data-en="Responsive Design">Design Responsivo</span>
-          <span class="skill-tag">Web Design</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <div class="skill-group-label" data-pt="Linguagens &amp; Ferramentas" data-en="Languages &amp; Tools">Linguagens &amp; Ferramentas</div>
+        <span class="skill-group-label" data-pt="Back-end & Dados" data-en="Back-end & Data">Back-end & Dados</span>
         <div class="skill-tags-row">
+          <span class="skill-tag">Supabase</span>
+          <span class="skill-tag">SQL</span>
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">C</span>
+          <span class="skill-tag">APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <span class="skill-group-label" data-pt="Ferramentas & Infra" data-en="Tools & Infra">Ferramentas & Infra</span>
+        <div class="skill-tags-row">
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitHub</span>
-          <span class="skill-tag">VSCode</span>
+          <span class="skill-tag">Vercel</span>
+          <span class="skill-tag">VS Code</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <div class="skill-group-label" data-pt="IA &amp; Automação" data-en="AI &amp; Automation">IA &amp; Automação</div>
+        <span class="skill-group-label" data-pt="IA & Automação" data-en="AI & Automation">IA & Automação</span>
         <div class="skill-tags-row">
           <span class="skill-tag">Prompt Engineering</span>
           <span class="skill-tag">Azure AI</span>
@@ -177,412 +405,392 @@
       </div>
 
       <div class="skill-group">
-        <div class="skill-group-label" data-pt="Infra &amp; Suporte" data-en="Infra &amp; Support">Infra &amp; Suporte</div>
+        <span class="skill-group-label" data-pt="Suporte & Operações" data-en="Support & Operations">Suporte & Operações</span>
         <div class="skill-tags-row">
           <span class="skill-tag" data-pt="Suporte Técnico" data-en="Technical Support">Suporte Técnico</span>
           <span class="skill-tag">Help Desk</span>
           <span class="skill-tag">AnyDesk</span>
-          <span class="skill-tag" data-pt="Atendimento Bilíngue" data-en="Bilingual Support">Atendimento Bilíngue</span>
-        </div>
-      </div>
-
-      <div class="skill-group">
-        <div class="skill-group-label" data-pt="E-commerce &amp; Plataformas" data-en="E-commerce &amp; Platforms">E-commerce &amp; Plataformas</div>
-        <div class="skill-tags-row">
           <span class="skill-tag">Shopify</span>
-          <span class="skill-tag">E-commerce</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <div class="skill-group-label" data-pt="Design &amp; Mídia" data-en="Design &amp; Media">Design &amp; Mídia</div>
+        <span class="skill-group-label" data-pt="Design & Mídia" data-en="Design & Media">Design & Mídia</span>
         <div class="skill-tags-row">
-          <span class="skill-tag" data-pt="Editor de Vídeos" data-en="Video Editor">Editor de Vídeos</span>
-          <span class="skill-tag">Canva</span>
           <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Canva</span>
+          <span class="skill-tag" data-pt="Edição de Vídeo" data-en="Video Editing">Edição de Vídeo</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <section id="certs" class="section reveal">
-    <span class="section-label" data-pt="formação" data-en="education">formação</span>
-    <h2 class="section-title" data-pt="Formação e Certificações" data-en="Education and Certifications">Formação e Certificações</h2>
-    <div class="certs-grid">
+  <!-- ═══ EXPERIENCE ═══ -->
+  <hr class="section-divider">
+  <section id="experience" class="section">
+    <div class="section-header reveal">
+      <span class="section-number" data-pt="04 — Experiência" data-en="04 — Experience">04 — Experiência</span>
+      <h2 class="section-title" data-pt="Experiência profissional" data-en="Professional experience">Experiência profissional</h2>
+    </div>
 
-      <article class="cert-card featured" role="article">
-        <div class="cert-issuer">Multivix · Cachoeiro de Itapemirim</div>
-        <div class="cert-name">Bacharelado em Sistemas de Informação</div>
-        <div class="cert-hours">2024 — 2028 (4º período em curso)</div>
+    <div class="experience-list reveal">
+      <div class="experience-item">
+        <div class="experience-date" data-pt="Jun 2026 — Presente" data-en="Jun 2026 — Present">Jun 2026 — Presente</div>
+        <div class="experience-info">
+          <h3 data-pt="Fundador & Desenvolvedor Full-Stack" data-en="Founder & Full-Stack Developer">Fundador & Desenvolvedor Full-Stack</h3>
+          <p class="experience-company">Nossa Página</p>
+          <p data-pt="Idealização, desenvolvimento e lançamento de SaaS para presentes digitais. Responsável pelo front-end (React, TanStack Start), back-end (Supabase), deploy (Vercel), experiência do usuário e operação do produto."
+             data-en="Ideation, development and launch of a SaaS for digital gifts. Responsible for front-end (React, TanStack Start), back-end (Supabase), deployment (Vercel), user experience and product operations.">
+            Idealização, desenvolvimento e lançamento de SaaS para presentes digitais. Responsável pelo front-end (React, TanStack Start), back-end (Supabase), deploy (Vercel), experiência do usuário e operação do produto.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">React</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">SaaS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-date" data-pt="2024 — Presente" data-en="2024 — Present">2024 — Presente</div>
+        <div class="experience-info">
+          <h3 data-pt="Suporte Técnico a Sistemas" data-en="Systems Technical Support">Suporte Técnico a Sistemas</h3>
+          <p class="experience-company">MR Consultoria e Sistemas</p>
+          <p data-pt="Suporte técnico a sistemas empresariais. Diagnóstico de problemas, atendimento a usuários, resolução de incidentes e acompanhamento de demandas em ambiente de produção."
+             data-en="Technical support for enterprise systems. Problem diagnosis, user support, incident resolution and tracking demands in production environments.">
+            Suporte técnico a sistemas empresariais. Diagnóstico de problemas, atendimento a usuários, resolução de incidentes e acompanhamento de demandas em ambiente de produção.
+          </p>
+          <div class="exp-tags">
+            <span class="tag" data-pt="Suporte Técnico" data-en="Technical Support">Suporte Técnico</span>
+            <span class="tag" data-pt="Sistemas" data-en="Systems">Sistemas</span>
+            <span class="tag" data-pt="Diagnóstico" data-en="Diagnosis">Diagnóstico</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-date" data-pt="2020 — 2023" data-en="2020 — 2023">2020 — 2023</div>
+        <div class="experience-info">
+          <h3 data-pt="E-commerce & Operações Digitais" data-en="E-commerce & Digital Operations">E-commerce & Operações Digitais</h3>
+          <p class="experience-company">WONKA</p>
+          <p data-pt="E-commerce internacional na Shopify com automações em Python, C e C#. Mais de 1.800 pedidos processados, atendimento bilíngue e gestão de comunidade com 5.000+ membros no Discord."
+             data-en="International e-commerce on Shopify with Python, C and C# automations. Over 1,800 orders processed, bilingual support and community management with 5,000+ members on Discord.">
+            E-commerce internacional na Shopify com automações em Python, C e C#. Mais de 1.800 pedidos processados, atendimento bilíngue e gestão de comunidade com 5.000+ membros no Discord.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">Shopify</span>
+            <span class="tag">Python</span>
+            <span class="tag" data-pt="Atendimento Bilíngue" data-en="Bilingual Support">Atendimento Bilíngue</span>
+            <span class="tag" data-pt="Automação" data-en="Automation">Automação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <hr class="section-divider">
+  <section id="education" class="section">
+    <div class="section-header reveal">
+      <span class="section-number" data-pt="05 — Formação" data-en="05 — Education">05 — Formação</span>
+      <h2 class="section-title" data-pt="Formação e certificações" data-en="Education and certifications">Formação e certificações</h2>
+    </div>
+
+    <div class="education-grid reveal">
+      <article class="education-card featured-edu">
+        <div class="education-issuer">Multivix · Cachoeiro de Itapemirim</div>
+        <div class="education-name" data-pt="Bacharelado em Sistemas de Informação" data-en="Bachelor's in Information Systems">Bacharelado em Sistemas de Informação</div>
+        <div class="education-detail" data-pt="2024 — 2028 · Em andamento" data-en="2024 — 2028 · In progress">2024 — 2028 · Em andamento</div>
       </article>
 
-      <article class="cert-card" role="article">
-        <div class="cert-issuer">Microsoft · Fundação Bradesco</div>
-        <div class="cert-name">
+      <article class="education-card">
+        <div class="education-issuer">Microsoft · Fundação Bradesco</div>
+        <div class="education-name">
           <a href="https://drive.google.com/file/d/1YhMgIQkiANkfmXf6f62--zGdMOiROKdF/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            AI-900 — Fundamentos de Inteligência Artificial
+            AI-900 — <span data-pt="Fundamentos de Inteligência Artificial" data-en="AI Fundamentals">Fundamentos de Inteligência Artificial</span>
           </a>
         </div>
-        <div class="cert-hours">16 horas</div>
+        <div class="education-detail">16h</div>
       </article>
 
-      <article class="cert-card" role="article">
-        <div class="cert-issuer">Fundação Bradesco</div>
-        <div class="cert-name">
-          <a href="https://drive.google.com/file/d/1_FFJKZsw44dbFBHY7mHUDFv3HvklnTnH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <article class="education-card">
+        <div class="education-issuer" data-pt="Fundação Bradesco" data-en="Bradesco Foundation">Fundação Bradesco</div>
+        <div class="education-name">
+          <a href="https://drive.google.com/file/d/1_FFJKZsw44dbFBHY7mHUDFv3HvklnTnH/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            data-pt="Administrando Banco de Dados" data-en="Database Administration">
             Administrando Banco de Dados
           </a>
         </div>
-        <div class="cert-hours">15 horas</div>
+        <div class="education-detail">15h</div>
       </article>
 
-      <article class="cert-card" role="article">
-        <div class="cert-issuer">Fundação Bradesco</div>
-        <div class="cert-name">
-          <a href="https://drive.google.com/file/d/1-oGvz094HpLmkNLRNi1vzEmdGAcMoBNx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <article class="education-card">
+        <div class="education-issuer" data-pt="Fundação Bradesco" data-en="Bradesco Foundation">Fundação Bradesco</div>
+        <div class="education-name">
+          <a href="https://drive.google.com/file/d/1-oGvz094HpLmkNLRNi1vzEmdGAcMoBNx/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            data-pt="Projetos de Sistemas de TI" data-en="IT Systems Projects">
             Projetos de Sistemas de TI
           </a>
         </div>
-        <div class="cert-hours">15 horas</div>
+        <div class="education-detail">15h</div>
       </article>
 
-      <article class="cert-card" role="article">
-        <div class="cert-issuer">Fundação Bradesco</div>
-        <div class="cert-name">
-          <a href="https://drive.google.com/file/d/11ZMn0wgEPBzwQoowX6Y8l7_2U-6TRhX-/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <article class="education-card">
+        <div class="education-issuer" data-pt="Fundação Bradesco" data-en="Bradesco Foundation">Fundação Bradesco</div>
+        <div class="education-name">
+          <a href="https://drive.google.com/file/d/11ZMn0wgEPBzwQoowX6Y8l7_2U-6TRhX-/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            data-pt="Segurança em Tecnologia da Informação" data-en="Information Technology Security">
             Segurança em Tecnologia da Informação
           </a>
         </div>
-        <div class="cert-hours">12 horas</div>
+        <div class="education-detail">12h</div>
       </article>
 
-      <article class="cert-card" role="article">
-        <div class="cert-issuer">Microsoft · Fundação Bradesco</div>
-        <div class="cert-name">
-          <a href="https://drive.google.com/file/d/1uHM4MtPqeg1-XMa0BjGPl1wlDt8qbdeN/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <article class="education-card">
+        <div class="education-issuer">Microsoft · Fundação Bradesco</div>
+        <div class="education-name">
+          <a href="https://drive.google.com/file/d/1uHM4MtPqeg1-XMa0BjGPl1wlDt8qbdeN/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            data-pt="Inteligência Artificial para Estudantes" data-en="Artificial Intelligence for Students">
             Inteligência Artificial para Estudantes
           </a>
         </div>
-        <div class="cert-hours">4 horas</div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="projects" class="section reveal">
-    <span class="section-label" data-pt="projetos" data-en="projects">projetos</span>
-    <h2 class="section-title" data-pt="Projetos recentes" data-en="Recent projects">Projetos recentes</h2>
-    <div class="projects-grid">
-
-      <article class="project-card" role="article">
-        <span class="project-number">01</span>
-        <h3 class="project-title" data-pt="rc.dev — Portfólio Pessoal" data-en="rc.dev — Personal Portfolio">rc.dev — Portfólio Pessoal</h3>
-        <p class="project-desc"
-          data-pt="Portfólio moderno com suporte bilíngue, animações suaves, acessibilidade e design responsivo."
-          data-en="Modern portfolio with bilingual support, smooth animations, accessibility and responsive design.">
-          Portfólio moderno com suporte bilíngue, animações suaves, acessibilidade e design responsivo.
-        </p>
-        <div class="project-tags">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span data-pt="Acessibilidade" data-en="Accessibility">Acessibilidade</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/ronald-cussati/rc.dev" target="_blank" rel="noopener noreferrer">
-            Ir ao GitHub →
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card" role="article">
-        <span class="project-number">02</span>
-        <h3 class="project-title" data-pt="PromptAI — Gerador de Prompts" data-en="PromptAI — Prompt Generator">PromptAI — Gerador de Prompts</h3>
-        <p class="project-desc"
-          data-pt="Aplicação web para gerar prompts otimizados para modelos de IA como ChatGPT, Claude, Perplexity, Midjourney e outros."
-          data-en="Web app to generate optimized prompts for AI models like ChatGPT, Claude, Perplexity, Midjourney and others.">
-          Aplicação web para gerar prompts otimizados para modelos de IA como ChatGPT, Claude, Perplexity, Midjourney e outros.
-        </p>
-        <div class="project-tags">
-          <span>JavaScript</span>
-          <span>AI</span>
-          <span>Prompt Engineering</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/ronald-cussati/promptai" target="_blank" rel="noopener noreferrer">
-            Ir ao GitHub →
-          </a>
-          <a href="https://ronald-cussati.github.io/promptai/" target="_blank" rel="noopener noreferrer">
-            Ver Demonstração →
-          </a>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="legacy" class="section reveal">
-    <span class="section-label" data-pt="legado" data-en="legacy">legado</span>
-    <h2 class="section-title" data-pt="Projetos finalizados" data-en="Finished projects">Projetos</h2>
-    <div class="projects-grid">
-      <article class="project-card legacy full-width" role="article">
-        <span class="project-number">01</span>
-        <h3 class="project-title">WONKA — E-commerce | Automação &amp; Comunidade</h3>
-        <p class="project-desc">
-          Ecossistema digital completo construído do zero na Shopify, com produtos digitais para mercado internacional. Inclui automações customizadas em Python, C e C# para processos de entrega, inventário e suporte. Mais de 1.800 pedidos processados, atendimento bilíngue a clientes em múltiplos países e comunidade de 5.000+ usuários no Discord. Projeto do conceito à operação — front-end, back-end, automação e suporte.
-        </p>
-        <div class="project-tags">
-          <span>Shopify</span>
-          <span>Python</span>
-          <span>C#</span>
-          <span>Web Design</span>
-          <span>E-commerce</span>
-          <span>Help Desk</span>
-          <span data-pt="Automação" data-en="Automation">Automação</span>
-          <span data-pt="Atendimento Internacional" data-en="International Support">Atendimento Internacional</span>
-          <span data-pt="Gestão de Comunidade" data-en="Community Management">Gestão de Comunidade</span>
-        </div>
-        <div class="project-links">
-          <span data-pt="✓ Projeto encerrado" data-en="✓ Project closed">✓ Projeto encerrado</span>
-        </div>
+        <div class="education-detail">4h</div>
       </article>
     </div>
   </section>
 
-  <section id="experience" class="section reveal">
-    <span class="section-label" data-pt="experiência" data-en="experience">experiência</span>
-    <h2 class="section-title" data-pt="Experiência Profissional" data-en="Professional Experience">Habilidades</h2>
-    <div class="experience-grid">
-
-      <article class="experience-card" role="article">
-        <h3>Profissional de TI — Suporte &amp; Desenvolvimento</h3>
-        <p class="exp-date">2020 — Presente</p>
-        <p>Suporte técnico remoto via AnyDesk para clientes internacionais. Desenvolvimento de sites, scripts e automações. Mais de 1.800 pedidos processados na Shopify com ticket médio de R$250. Atendimento help desk e gestão de comunidade com 5.000+ usuários no Discord.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1rem;">
-          <span class="skill-tag">Suporte Técnico</span>
-          <span class="skill-tag">Help Desk</span>
-          <span class="skill-tag">Atendimento Bilíngue</span>
-          <span class="skill-tag">Shopify</span>
-          <span class="skill-tag">E-commerce</span>
-          <span class="skill-tag">Automação</span>
-        </div>
-      </article>
-
-      <article class="experience-card" role="article">
-        <h3>Estudante — Sistemas de Informação</h3>
-        <p class="exp-date">Multivix · 2024 — 2028</p>
-        <p>Bacharelado com ênfase em desenvolvimento web, IA e sistemas de informação.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1rem;">
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Banco de Dados</span>
-          <span class="skill-tag">Lógica de Programação</span>
-          <span class="skill-tag">Análise de Sistemas</span>
-          <span class="skill-tag">Redes de Computadores</span>
-          <span class="skill-tag">Sistemas Operacionais</span>
-        </div>
-      </article>
-
+  <!-- ═══ CONTACT ═══ -->
+  <hr class="section-divider">
+  <section id="contact" class="section">
+    <div class="section-header reveal" style="text-align: center;">
+      <span class="section-number" data-pt="06 — Contato" data-en="06 — Contact">06 — Contato</span>
     </div>
-  </section>
 
-  <section id="contact" class="section reveal">
-    <span class="section-label" data-pt="contato" data-en="contact">contato</span>
-    <h2 class="contact-title">
-      <span data-pt="Busco estágio em" data-en="Seeking an internship in">Busco estágio em</span><br>
-      <span class="highlight" data-pt="Suporte & Desenvolvimento." data-en="Support & Development.">Suporte &amp; Desenvolvimento.</span>
+    <h2 class="contact-title reveal">
+      <span data-pt="Interesse em conversar sobre" data-en="Interested in discussing">Interesse em conversar sobre</span><br>
+      <span class="accent-text" data-pt="desenvolvimento e tecnologia?" data-en="development and technology?">desenvolvimento e tecnologia?</span>
     </h2>
-<p class="contact-subtitle" 
-   data-pt="Disponível para início imediato. <br> Bora conversar? </br>" 
-   data-en="Available to start immediately. <br> Let's talk? </br>">
-  Disponível para início imediato. <br> Bora conversar? </br>
-</p>
-    <div class="contact-buttons">
+
+    <p class="contact-subtitle reveal reveal-delay-1"
+      data-pt="Disponível para oportunidades em desenvolvimento de software e tecnologia."
+      data-en="Available for opportunities in software development and technology.">
+      Disponível para oportunidades em desenvolvimento de software e tecnologia.
+    </p>
+
+    <div class="contact-buttons reveal reveal-delay-2">
       <a href="https://wa.me/5511992485378" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-        <span data-pt="Fale comigo" data-en="Say hi">Fale comigo</span>
+        <span data-pt="Entrar em contato" data-en="Get in touch">Entrar em contato</span>
       </a>
-      <a href="https://github.com/ronald-cussati" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/ronald-cussati" class="btn btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/ronald-cussati" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/ronald-cussati" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </section>
 
 </main>
 
+<!-- ═══ FOOTER ═══ -->
 <footer>
-  <p data-pt="© 2026 rc.dev · Ronald Cussati · Brasil, ES" data-en="© 2026 rc.dev · Ronald Cussati · Brazil, ES">© 2026 Ronald Cussati · Brasil, ES</p>
+  <p data-pt="© 2026 rc.dev · Ronald Cussati · Brasil" data-en="© 2026 rc.dev · Ronald Cussati · Brazil">© 2026 rc.dev · Ronald Cussati · Brasil</p>
 </footer>
 
-<div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
-
+<!-- ═══ JAVASCRIPT ═══ -->
 <script>
-const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-let reducedMotion = mediaQuery.matches;
-mediaQuery.addListener((e) => { reducedMotion = e.matches; });
+(() => {
+  'use strict';
 
-function setLanguage(lang) {
-  // Traduz os elementos com data-pt / data-en
-  document.querySelectorAll('[data-pt]').forEach((el) => {
-    const textNode = Array.from(el.childNodes).find(
-      node => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
-    );
-    if (textNode) {
-      textNode.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+  // ── Reduced Motion ──
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let reducedMotion = mq.matches;
+  mq.addEventListener('change', (e) => { reducedMotion = e.matches; });
+
+  // ── Language System ──
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-pt]').forEach((el) => {
+      // Handle elements with child nodes that have text
+      const textNode = Array.from(el.childNodes).find(
+        (n) => n.nodeType === Node.TEXT_NODE && n.textContent.trim()
+      );
+      if (textNode) {
+        textNode.textContent = lang === 'pt' ? el.dataset.pt : el.dataset.en;
+      }
+    });
+
+    // Resume button
+    const resumeBtn = document.getElementById('resumeBtn');
+    if (resumeBtn) {
+      if (lang === 'pt') {
+        resumeBtn.setAttribute('href', 'assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf');
+        resumeBtn.setAttribute('download', 'Curriculum_Vitae_Ronald_Cussati_PT.pdf');
+      } else {
+        resumeBtn.setAttribute('href', 'assets/Curriculum_Vitae_Ronald_Cussati_EN.pdf');
+        resumeBtn.setAttribute('download', 'Curriculum_Vitae_Ronald_Cussati_EN.pdf');
+      }
     }
-  });
 
-  // ── ALTERAÇÃO DINÂMICA DO CURRÍCULO ──
-  const resumeBtn = document.getElementById('resumeBtn');
-  if (resumeBtn) {
-    if (lang === 'pt') {
-      resumeBtn.setAttribute('href', 'assets/Curriculum_Vitae_Ronald_Cussati_PT.pdf');
-      resumeBtn.setAttribute('download', 'Curriculum_Vitae_Ronald_Cussati_PT.pdf');
-    } else {
-      resumeBtn.setAttribute('href', 'assets/Curriculum_Vitae_Ronald_Cussati_EN.pdf');
-      resumeBtn.setAttribute('download', 'Curriculum_Vitae_Ronald_Cussati_EN.pdf');
+    // Update lang buttons
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      const isActive = btn.dataset.lang === lang;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive);
+    });
+
+    // Update html lang
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+    localStorage.setItem('lang', lang);
+  }
+
+  // ── Scroll Reveal ──
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  // ── Active Nav Section ──
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        document.querySelectorAll('.nav-link').forEach((link) => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { threshold: 0.25, rootMargin: '-80px 0px -50% 0px' });
+
+  // ── Parallax (Hero only) ──
+  function initParallax() {
+    if (reducedMotion) return;
+
+    const parallaxElements = document.querySelectorAll('.parallax-element');
+    if (!parallaxElements.length) return;
+
+    let ticking = false;
+
+    function updateParallax() {
+      const scrollY = window.scrollY;
+      // Only apply parallax in the hero area
+      if (scrollY > window.innerHeight) {
+        ticking = false;
+        return;
+      }
+
+      parallaxElements.forEach((el) => {
+        const speed = parseFloat(el.dataset.speed) || 0.02;
+        const y = scrollY * speed * 100;
+        el.style.transform = `translate3d(0, ${y}px, 0)`;
+      });
+
+      ticking = false;
     }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
   }
 
-  // Atualiza o estado visual dos botões de idioma
-  document.querySelectorAll('.lang-btn').forEach((btn) => {
-    const isActive = btn.dataset.lang === lang;
-    btn.classList.toggle('active', isActive);
-    btn.setAttribute('aria-pressed', isActive);
-  });
-  localStorage.setItem('lang', lang);
-}
+  // ── Subtle cursor movement on hero (desktop only) ──
+  function initCursorEffect() {
+    if (reducedMotion) return;
+    if (window.matchMedia('(hover: none)').matches) return;
 
-function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+    const heroIntro = document.querySelector('.hero-intro');
+    const heroSection = document.querySelector('.hero');
+    if (!heroIntro || !heroSection) return;
 
-function animateStat(el) {
-  const target = parseFloat(el.dataset.target);
-  if (isNaN(target)) return;
-  const unit = el.dataset.unit || '';
-  let startTime = null;
-  const duration = 2000;
-  function step(now) {
-    if (!startTime) startTime = now;
-    const progress = Math.min((now - startTime) / duration, 1);
-    const current = target * easeOutCubic(progress);
-    el.textContent = Math.floor(current).toLocaleString('pt-BR') + (unit ? ` ${unit}` : '') + (target >= 1 ? '+' : '');
-    if (progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      heroIntro.style.transform = `translate(${x * 6}px, ${y * 4}px)`;
+    });
 
-let particles = [];
-let particlesRaf = null;
-const canvas = document.getElementById('particlesCanvas');
-const ctx = canvas?.getContext('2d');
-
-function initParticles() {
-  if (!canvas || !ctx || reducedMotion) return;
-  function resizeCanvas() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-  particles = [];
-  for (let i = 0; i < 15; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      radius: Math.random() * 2 + 1,
-      color: `hsl(${Math.random() * 360}, 50%, 60%)`
+    heroSection.addEventListener('mouseleave', () => {
+      heroIntro.style.transform = 'translate(0, 0)';
+      heroIntro.style.transition = 'transform 0.5s ease';
+      setTimeout(() => { heroIntro.style.transition = ''; }, 500);
     });
   }
-}
 
-function animateParticles() {
-  if (!ctx || reducedMotion) return;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach((p) => {
-    p.x += p.vx; p.y += p.vy;
-    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-    ctx.save();
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = p.color;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-    ctx.fillStyle = p.color;
-    ctx.fill();
-    ctx.restore();
+  // ── Scroll Progress ──
+  function initScrollProgress() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          bar.style.width = `${progress}%`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ── Mobile Menu ──
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
+
+  if (mobileBtn && navLinks) {
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('active');
+      mobileBtn.classList.toggle('active');
+      mobileBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    });
+
+    navLinks.querySelectorAll('.nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileBtn.classList.remove('active');
+        mobileBtn.setAttribute('aria-label', 'Abrir menu');
+      });
+    });
+  }
+
+  // ── Case Study Toggle ──
+  const caseToggle = document.getElementById('caseToggle');
+  const casePanel = document.getElementById('casePanel');
+
+  if (caseToggle && casePanel) {
+    caseToggle.addEventListener('click', () => {
+      const isOpen = casePanel.classList.toggle('open');
+      caseToggle.classList.toggle('expanded', isOpen);
+      caseToggle.setAttribute('aria-expanded', isOpen);
+      casePanel.setAttribute('aria-hidden', !isOpen);
+    });
+  }
+
+  // ── Language Buttons ──
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
   });
-  particlesRaf = requestAnimationFrame(animateParticles);
-}
 
-const cursor = document.getElementById('cursorGlow');
-let mouseX = 0, mouseY = 0, cursorRaf = null;
+  // ── Init ──
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('lang') || 'pt';
+    setLanguage(savedLang);
 
-function updateCursor() {
-  if (cursor && !reducedMotion) cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-  cursorRaf = requestAnimationFrame(updateCursor);
-}
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+    document.querySelectorAll('.section[id]').forEach((el) => navObserver.observe(el));
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('revealed'); });
-}, { threshold: 0.1 });
-
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.stat-num[data-target]').forEach(animateStat);
-      statsObserver.unobserve(entry.target);
-    }
+    initParallax();
+    initCursorEffect();
+    initScrollProgress();
   });
-}, { threshold: 0.5 });
-
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      document.querySelectorAll('.nav-link').forEach((link) => link.classList.remove('active'));
-      const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-      if (activeLink) activeLink.classList.add('active');
-    }
-  });
-}, { threshold: 0.3 });
-
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-
-mobileBtn.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('active');
-  mobileBtn.classList.toggle('active');
-  mobileBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-});
-
-navLinks.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    mobileBtn.classList.remove('active');
-    mobileBtn.setAttribute('aria-label', 'Abrir menu');
-  });
-});
-
-document.querySelectorAll('.lang-btn').forEach((btn) => {
-  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-});
-
-document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
-
-window.addEventListener('DOMContentLoaded', () => {
-  const savedLang = localStorage.getItem('lang') || 'pt';
-  setLanguage(savedLang);
-  document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
-  const aboutSection = document.getElementById('about');
-  if (aboutSection) statsObserver.observe(aboutSection);
-  document.querySelectorAll('.section[id]').forEach((el) => navObserver.observe(el));
-  if (!reducedMotion) { initParticles(); animateParticles(); updateCursor(); }
-});
-
-window.addEventListener('beforeunload', () => {
-  if (particlesRaf) cancelAnimationFrame(particlesRaf);
-  if (cursorRaf) cancelAnimationFrame(cursorRaf);
-});
+})();
 </script>
+
 </body>
 </html>
