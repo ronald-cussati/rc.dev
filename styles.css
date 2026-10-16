@@ -301,8 +301,13 @@ a {
   z-index: 2;
 }
 
-.hero-intro {
+.hero-intro-wrapper {
   max-width: 720px;
+}
+
+.hero-intro {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
 }
 
 .hero-label {
@@ -730,6 +735,9 @@ a {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
   margin-top: 2rem;
+}
+.projects-grid .project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .project-card {
